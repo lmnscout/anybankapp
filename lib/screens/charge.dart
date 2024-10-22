@@ -24,7 +24,10 @@ class Charge extends StatelessWidget {
               children: <Widget>[
                 const Padding(
                   padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text("Quanto você quer cobrar?", style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),),
+                  child: Text(
+                    "Quanto você quer cobrar?",
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+                  ),
                 ),
                 TextField(
                   controller: textController,
@@ -43,13 +46,17 @@ class Charge extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(right: 8.0),
-                        child: PrimaryButton(text: "Continuar", onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (_) => const _ChargeConfirm()));
-                        }),
+                        child: PrimaryButton(
+                            text: "Continuar",
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (_) => const _ChargeConfirm()));
+                            }),
                       ),
-                      SecondaryButton(text: "Cancelar", onTap: (){
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const Dashboard()));
-                      }),
+                      SecondaryButton(
+                          text: "Cancelar",
+                          onTap: () {
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const Dashboard()));
+                          }),
                     ],
                   ),
                 ),
@@ -63,7 +70,7 @@ class Charge extends StatelessWidget {
 }
 
 class _ChargeConfirm extends StatelessWidget {
-  const _ChargeConfirm({super.key});
+  const _ChargeConfirm();
 
   @override
   Widget build(BuildContext context) {
@@ -90,15 +97,15 @@ class _ChargeConfirm extends StatelessWidget {
                   padding: EdgeInsets.only(bottom: 32.0),
                   child: Text(
                     "50",
-                    style: TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.w700,
-                        color: AppColors.primary),
+                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700, color: AppColors.primary),
                   ),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text("Nome", style: TextStyle(fontSize: 22),),
+                  child: Text(
+                    "Nome",
+                    style: TextStyle(fontSize: 22),
+                  ),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(bottom: 32.0),
@@ -109,23 +116,38 @@ class _ChargeConfirm extends StatelessWidget {
                 ),
                 const Padding(
                   padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text("CPF", style: TextStyle(fontSize: 22),),
+                  child: Text(
+                    "CPF",
+                    style: TextStyle(fontSize: 22),
+                  ),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(bottom: 32.0),
-                  child: Text("***.***.142-55", style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),),
+                  child: Text(
+                    "***.***.142-55",
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+                  ),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text("Instituição", style: TextStyle(fontSize: 22),),
+                  child: Text(
+                    "Instituição",
+                    style: TextStyle(fontSize: 22),
+                  ),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(bottom: 32.0),
-                  child: Text("AnyBank", style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),),
+                  child: Text(
+                    "AnyBank",
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+                  ),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(bottom: 32.0),
-                  child: Text("Mostre o QR code na sua tela ou envie o link para quem vai pagar:", style: TextStyle(fontSize: 22),),
+                  child: Text(
+                    "Mostre o QR code na sua tela ou envie o link para quem vai pagar:",
+                    style: TextStyle(fontSize: 22),
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -145,11 +167,13 @@ class _ChargeConfirm extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(right: 8.0),
-                        child: PrimaryButton(text: "Continuar", onTap: (){}),
+                        child: PrimaryButton(text: "Continuar", onTap: () {}),
                       ),
-                      SecondaryButton(text: "Cancelar", onTap: (){
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const Dashboard()));
-                      }),
+                      SecondaryButton(
+                          text: "Cancelar",
+                          onTap: () {
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const Dashboard()));
+                          }),
                     ],
                   ),
                 ),
